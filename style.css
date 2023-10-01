@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Mulish';
+    font-display: swap;
+    src: local('Mulish'), url('./assets/fonts/mulish-400.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    font-display: swap;
+    src: local('Mulish'), url('./assets/fonts/mulish-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Mulish';
+}
+
+::-moz-placeholder {
+    font-family: 'Mulish';
+}
+
+:-ms-input-placeholder {
+    font-family: 'Mulish';
+}
+
+:-moz-placeholder {
+    font-family: 'Mulish';
+}
+
+.container,
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 976px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .models__container {
+        max-width: 1350px;
+    }
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #292931;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    /* Don't forget about fallback font/family */
+    font-size: 20px;
+    line-height: normal;
+    min-height: 100vh;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(2,max-content);*/
+    /*column-gap: 30px;*/
+}
+
+main {
+    padding-left: 250px;
+    padding-right: 30px;
+}
+
+.navbar {
+    padding-top: 100px;
+    padding-right: 50px;
+    background-color: bisque;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.navbar__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.navbar__link {
+    text-decoration: none;
+    font-weight: 700;
+    color: darkslategray;
+}
+
+.button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0071E3;
+    border: none;
+    border-radius: 50px;
+    min-width: 263px;
+    padding: 15px 35px;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: ease-in-out .75s;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: 'Mulish', sans-serif;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    border-radius: 50px;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #4000d8, #0056b2);
+    transition: left .75s;
+}
+
+.button > span {
+    z-index: 9;
+}
+
+.button:hover::before {
+    left: 0;
+}
+
+.accordion {
+    width: 100%;
+    background-color: #f1ffd5;
+    padding: 50px 72px;
+    box-shadow: 0px 4px 4px rgba(0, 99, 32, 0.15);
+    border-radius: 15px;
+}
+
+.faq__accordion-container {
+    margin-top: 32px;
+}
+
+.accordion__container {
+    padding: 24px 14px;
+    border-bottom: 1px solid rgba(24, 27, 32, 0.25);
+    transition: ease-in-out .3s;
+    background-color: ivory;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.accordion__question {
+    appearance: none;
+    list-style: none;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+    /*background-image: url(../img/plus.svg);*/
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding: 24px 0;
+    padding-right: 100px;
+}
+
+.accordion__container[open] .accordion__question {
+    /*background-image: url(../img/minus.svg);*/
+    /*color: $green_color;*/
+    transition: ease-in-out .3s;
+}
+
+.accordion__answer {
+    padding-bottom: 24px;
+    /*color: gainsboro;*/
+}
+
+.prepositions__answer-img {
+    width: 500px;
+    height: 500px;
+}
+
+.prepositions__answer-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.lesson__desc--dialog > li {
+    margin-bottom: 14px;
+}
+
+.lesson__notice {
+    border: 1px solid cornflowerblue;
+    padding: 10px 24px;
+    border-radius: 14px;
+}
+
+.lesson__notice p > span {
+    color: tomato;
+    font-size: 1.25em;
+    font-weight: 700;
+}
